@@ -7,7 +7,7 @@ import sys
 
 #표준입력을 파일로 설정
 sys.stdin = open("input.txt", "r")
-
+-
 '''
 
 '''
