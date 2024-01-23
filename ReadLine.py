@@ -91,3 +91,15 @@ N = int(input())
 print(arr) 
 [[1, 2, 3], [4, 5, 6], [7, 8, 9]]       #출력하면 2차원 리스트로 입력된 것 확인됨. 
 '''
+
+
+
+'''
+# 여러 줄을 입력할 경우 
+while True:
+    line = input()
+    if not line: break
+    print(line)
+
+
+'''
