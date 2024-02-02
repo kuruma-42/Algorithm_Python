@@ -1,12 +1,12 @@
 # baekjoon 2562 최댓값 몸풀기
 arr: [int] = []
-temp: [int] = []
-for i in range(9):
-    arr.append(int(input()))
+max_val = -987654321
 
-temp = arr
-temp.sort()
-max_val = temp[8]
+for i in range(9):
+    t = int(input())
+    max_val = max(max_val, t)
+    arr.append(t)
+
 
 print(max_val)
 
