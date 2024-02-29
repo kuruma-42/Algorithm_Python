@@ -12,9 +12,7 @@ flag = False
 for i in range(n):
     for j in range(m):
         if visited[i][j] == 0 and a[i][j] == 1:
-            # bfs(i,j)
             arr.append([i,j])
-            # visited[i][j] = 1
 
 # 골드문제에서 난이도용으로 어렵게 낸 여러 곳에서 BFS를 시작하는 경우
 def bfs(arr: [int]):
@@ -90,4 +88,3 @@ def bfs(y: int, x: int):
             visited[ny][nx] = visited[t[0]][t[1]] + 1
 
             cnt = max(cnt, visited[ny][nx])
-            print(visited[ny][nx])
