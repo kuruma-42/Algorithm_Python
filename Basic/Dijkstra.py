@@ -1,8 +1,4 @@
 # Dijkstra(다익스트라 - 최단 경로)
-"""
-    최소비용 구하기(dijkstra)
-
-"""
 import sys
 import heapq
 
