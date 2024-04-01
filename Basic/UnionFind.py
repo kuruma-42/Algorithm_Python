@@ -1,5 +1,5 @@
 
-v, e = (6,7)
+v, e = (6,10)
 table = [i for i in range(v + 1)]
 
 # 해당
