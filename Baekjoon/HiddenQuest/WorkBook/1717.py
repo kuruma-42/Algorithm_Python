@@ -1,5 +1,6 @@
 # baekjoon 1717 집합의 표현 Union Find
 # Recursion Error 때문에 Recursion Limit을 푸는 코드를 써야한다.
+# 최소신장트리를 풀 떄도 Union find 코드는 그대로 쓸 수 있다.
 import sys
 limit_number = 100000
 sys.setrecursionlimit(limit_number)
