@@ -11,6 +11,7 @@
 # 스택에 남아있는 값이 있는지 확인 후 뺸다.
 # deque가 편해서 deque로 풀었다.
 # if else 문이 많아져서 더 좋은 풀이를 생각해야겠다.
+# 커밋 확인 
 import sys
 from collections import deque
 
