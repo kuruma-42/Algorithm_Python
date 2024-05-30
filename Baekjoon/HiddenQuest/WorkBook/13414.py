@@ -16,7 +16,7 @@ ret = ""
 for i in range(m):
     dic[input().rstrip()] = i
 
-ans = sorted(dic.items(), key=lambda x:x[1])
+ans = sorted(dic.items(), key=lambda x: x[1])
 
 if n > len(ans):
     n = len(ans)

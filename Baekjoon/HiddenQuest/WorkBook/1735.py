@@ -22,18 +22,19 @@ adjList = [[] for i in range(n + 1)]
 for i in range(m):
     u, v, w = map(int, input().split())
     # 도착지와 가중치를 튜플로 묶어서 인접리스트에 저장
-    adjList[u].append((v,w))
+    adjList[u].append((v, w))
 
 INF = 1_000_000_000
 # 방문과 거리를 잰다.
 dist_table = [INF] * (n + 1)
 ans = ""
 
+
 def dijkstra(start):
     # 빈 큐 생성
     q = []
     # 힙큐에 푸쉬 (가중치, 출발지)
-    heapq.heappush(q, (0,start))
+    heapq.heappush(q, (0, start))
     # 출발하는 곳 거리 0
     dist_table[start] = 0
 
@@ -54,12 +55,13 @@ def dijkstra(start):
                 dist_table[v] = dist_table[u] + w
                 heapq.heappush(q, (dist_table[v], v))
 
+
 dijkstra(start)
 
 for i in range(1, n + 1):
     if dist_table[i] == INF:
         ans += "INF\n"
     else:
-        ans += "{0}\n".format(dist_table[i])
+        ans += str(dist_table[i]) + "\n"
 
 print(ans)
