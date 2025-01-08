@@ -12,9 +12,10 @@ X는 갈 수 없는 곳
 처음 dfs로 풀었을 때 재귀댑스 오류 때문에 통과가 안 됐다.
 재귀 댑스를 늘려주니 런타임 에러가 풀렸다.
 
+파이썬 문제로 재귀 함수를 작성할 때 리커젼 리밋 해제를 작성하고 해야한다.
 '''
 import sys
-sys.setrecursionlimit(100000)
+sys.setrecursionlimit(10 ** 6)
 
 
 a: [[str]] = []
@@ -82,6 +83,10 @@ def dfs(sy, sx):
 
 
 
+'''
+i랑 j랑 변수명 쓸 때 잘 쓸 것 
+for문 하위의 i는 다른 가 중복되면 런타임 에러나 문제를 풀 수 없게 된다. 
+'''
 #
 # from collections import deque
 #
@@ -139,4 +144,4 @@ def dfs(sy, sx):
 #         return [-1]
 #     else:
 #         return sorted(ans_arr)
-
+#
