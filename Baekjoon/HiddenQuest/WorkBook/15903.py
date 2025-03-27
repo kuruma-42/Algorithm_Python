@@ -35,18 +35,21 @@ ans = 0
 heapq.heapify(arr)
 
 for _ in range(m):
-    # 수 하나를 뺸다
+    # 가장 작은 두 수를 뺀다
     n1 = heapq.heappop(arr)
+    n2 = heapq.heappop(arr)
+    # 두 수를 더한다
+    merged_value = n1 + n2
+    # 두 번 푸시한다
+    heapq.heappush(arr, merged_value)
+    heapq.heappush(arr, merged_value)
 
-    if arr:
-        # 수 하나를 뺸다
-        n2 = heapq.heappop(arr)
-        # 두 수를 더한다
-        merged_value = n1 + n2
-        # 배열에 추가한다
-        arr += [merged_value, merged_value]
-        # 다시 heap 정렬 한다
-        heapq.heapify(arr)
+    # 아래와 같이 짜면 시간 차이가 10배 난다.
+    # 배열에 추가한다
+    # heapify가 두 번 정렬된다
+    # arr += [merged_value, merged_value]
+    # # 다시 heap 정렬 한다
+    # heapq.heapify(arr)
 
 # 총 합 계산
 for value in arr:
